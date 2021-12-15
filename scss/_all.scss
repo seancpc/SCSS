@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css");
+@import 'bootstrap/bootstrap';
+@import 'main-header';
+@import 'main-content';
+@import 'article';
+@import 'visit';
+@import 'main-footer';
+@import 'toTop';
+
+$font-stack: 'Noto Sans TC', sans-serif;
+$primary-color:#fffaf0;
+
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+// 輪播
+.d-block {
+	width: 100%;
+	height: 60vh;
+	object-fit: cover;
+}

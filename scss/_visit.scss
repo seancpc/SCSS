@@ -1,0 +1,56 @@
+@import "variables";
+
+.visit {
+    margin: 50px auto 50px;
+    h2 {
+        text-align: center;
+    }
+}
+
+.come {
+    width: 90%;
+	margin: auto;
+	display: flex;
+    .come-image {
+        display: none;
+        @media screen and (min-width:1200px) {
+            display: flex;
+        }
+        img {
+            @media screen and (min-width:$pad) {
+                width: 100%;
+		        object-fit: cover;
+            }
+        }
+    }
+    .c-form {
+        width: 90%;
+        .cName input[type=text] {
+            width: 100%;
+        }
+        .cNumber input[type=number] {
+            width: 100%;
+        }
+        .cEmail input[type=email] {
+            width: 100%;
+        }
+        @media screen and (min-width:$pad) {
+            .cName, .cNumber, .cEmail {
+                width: 500px;
+                size: 50;
+            }
+        }
+    }
+    .c-btn {
+        background-color: #f9cec2;
+    }
+    @media screen and (min-width:$pad) {
+        width: 60%;
+		margin: auto;
+		display: flex;
+        .c-c {
+            width: 100%;
+            margin: auto auto auto 60px;
+        }
+    }
+}

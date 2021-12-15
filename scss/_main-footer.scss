@@ -1,0 +1,96 @@
+@import "variables";
+
+$primary-color:#fffaf0;
+
+@mixin flexbox($direction) {
+    flex-direction: $direction;
+}
+
+.main-footer {
+    padding: 20px 0 0 0;
+	background-color: $primary-color;
+    .copyright {
+        width: 100%;
+        margin: 30px 0 0 0;
+        padding: 10px 0px;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+    }
+    .container {
+        display: flex;
+    	margin: auto;
+	    width: 100%;
+    	flex-wrap: wrap;
+        .footer-item {
+            margin: 10px 20px;
+	        width: 100%;
+	        flex-grow: 1;
+            h4 {
+                color: #000;
+	            border-bottom: 1px dotted #000;
+	            margin-bottom: 8px;
+	            padding-bottom: 8px;
+	            font-size: 22px;
+            }
+            nav {
+                display: flex;
+	            @include flexbox(column);
+                a {
+                    line-height: 1.4;
+	                text-decoration: none;
+	                padding: 6px 0;
+	                color: #000;
+                }
+            }
+            .ci {
+                display: flex;
+                margin: 0 250px 0 0;
+                top: 0;
+                img {
+                    padding: 5px;
+	                width: 30px;
+	                height: 30px;
+                }
+            }
+            @media screen and (min-width:$pad) {
+                margin: 0 20px;
+		        width: 0;
+		        flex-grow: 1;
+            }
+        }
+        .footer-subs {
+            display: flex;
+	        @include flexbox(column);
+            form {
+                display: flex;
+	            width: 100%;
+	            margin: auto 0px;
+            }
+            input[type="text"] {
+                width: 0;
+            	flex-grow: 1;
+            }
+            input[type="submit"] {
+                color: #fff;
+            	background-color: #000;
+            }
+            input[type="text"],
+            input[type="submit"] {
+                border: none;
+	            padding: 5px 10px;
+            }
+        }
+        @media screen and (min-width:$pad) {
+            display: flex;
+		    margin: auto;
+		    width: 100%;
+		    max-width: 1200px;
+        }
+    }
+    @media screen and (min-width:$pad) {
+        padding: 50px 0 0 0;
+		background-color: $primary-color;
+    }
+}
+

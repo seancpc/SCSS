@@ -1,0 +1,40 @@
+@import "variables";
+
+.toTop-arrow {
+    width: 40px;
+	height: 40px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	border-radius: 33%;
+	opacity: 0.6;
+	background: rgb(239, 129, 129);
+	cursor: pointer;
+	position: fixed;
+	right: 22px;
+	bottom: 2px;
+	display: none;
+    &::before {
+        transform: rotate(-45deg) translate(0,-50%);
+	    left: 8px;;
+    }
+    &::after {
+        transform: rotate(45deg) translate(0,-50%);
+	    right: 8px;
+    }
+    &::before,&::after {
+        width: 18px;
+	    height: 5px;
+	    border-radius: 3px;
+	    background: #fff;
+	    position: absolute;
+	    content: "";
+    }
+    &:focus {
+        outline: none;
+    }
+    @media screen and (min-width:$pad) {
+        right: 16px;
+		bottom: 16px;
+    }
+}
